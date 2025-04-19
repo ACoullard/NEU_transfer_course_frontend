@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+
+@theme {
+    --color-neu-red: #C8102E
+}

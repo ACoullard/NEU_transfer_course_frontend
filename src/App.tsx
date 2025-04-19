@@ -110,9 +110,13 @@ function App() {
 
   return (
     <>
+    <header className='bg-neu-red text-white p-6'>
+      <a>NEU Reverse Transfer Course Database</a>
+
+    </header>
     {/* Main div. Just centers*/}
-    <div className='h-screen flex justify-center items-center flex-col'>
-      <div className='flex flex-col gap-4 mt-30'>
+    <div className='h-screen flex items-center flex-col'>
+      <div className='flex flex-col gap-4 mt-20'>
         <h1 className='text-3x1' >Hello, this is the NEU Reverse transfer class finder</h1>
         <div className='flex flex-col sm:flex-row'>
           <select 
@@ -142,20 +146,21 @@ function App() {
             {codeOptions}
           </select>
         </div>
-      </div>
+      
           {/* <p className='mt-4'>{dept} {code}</p> */}
-      <div className='overflow-y-auto'>
-        <table className="w-full table-auto min-w-max text-slate-800 mt-16">
-          <thead>
-            <tr className="text-slate-500 border-b border-slate-300 bg-slate-50">
-              <th>Course</th>
-              <th>Institution</th>
-            </tr>
-          </thead>
-          <tbody className='table-auto'>
-            {tableRows}
-          </tbody>
-        </table>
+        <div className='overflow-y-auto w-full'>
+          <table className="w-full table-auto min-w-max text-slate-800 mt-16">
+            <thead>
+              <tr className="text-slate-500 border-b border-slate-300 bg-slate-50">
+                <th>Course</th>
+                <th>Institution</th>
+              </tr>
+            </thead>
+            <tbody className='table-auto'>
+              {tableRows}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     </>
