@@ -1,4 +1,15 @@
-# React + TypeScript + Vite
+# Reverse Transfer Course Database
+
+Provides a web interface to access and query a database of past sucessful course transfers at Northeastern University.
+
+## Purpose
+
+A similiar website is officially offered by Northeastern themselves, but their site is extremely centered around determining what Northeastern course credit may be earned with a course from another university.
+
+By contrast, this site allows a user to view the options available at other universities that have been used to satisfy a particular Northeastern course in the past.
+
+
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -51,4 +62,4 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
-```
+``` -->

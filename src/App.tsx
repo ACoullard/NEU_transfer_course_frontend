@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, ReactElement } from 'react'
 import './App.css'
-const SERVER_URL = 'http://127.0.0.1:5000/api'
+const SERVER_URL = 'https://www.acserver.net'
 let firstRun = true
 type ClassList = {[key:string]: string[]}
 
