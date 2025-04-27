@@ -1,0 +1,40 @@
+name: Publish Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: set lower case owner name
+        run: |
+          echo "ACTOR_LC=${ACTOR,,}" >>${GITHUB_ENV}
+        env:
+          ACTOR: '${{ github.actor }}'
+
+      - name: Build and push image
+        uses: docker/build-push-action@v5
+        env:
+          ACTOR_LC: ${{ env.ACTOR_LC }}
+        with:
+          context: .
+          dockerfile: Dockerfile
+          tags: ghcr.io/${{ env.ACTOR_LC }}/neu_transfer_db_frontent:latest
+          push: true

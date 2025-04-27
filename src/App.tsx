@@ -20,6 +20,7 @@ async function fetchClassList() {
   }
   catch {
     console.error("AHHHHH!!!!! ERROR!!")
+    return new Promise((resolve, reject) => {if (true) {resolve({"ERROR":["ERROR"]})} else {reject()}})
   }
 
   // return {"CS":["3000", "3500"], "MATH":["1365"]}
@@ -39,6 +40,7 @@ async function fetchCourses(courseCode: string) {
   }
   catch {
     console.error("AHHHHH!!!!! ERROR!!")
+    return new Promise((resolve, reject) => { if (true) {resolve([["ERROR", "ERROR"]])} else {reject()}})
   }
   
   // return [["MATH 281","Alfred University"],["MATH 130","American College of Thessaloniki, The"]]
@@ -111,13 +113,20 @@ function App() {
   return (
     <>
     <header className='bg-neu-red text-white p-6'>
-      <a>NEU Reverse Transfer Course Database</a>
+      <a className='text-2xl'>NEU Reverse Transfer Course Database</a>
 
     </header>
     {/* Main div. Just centers*/}
     <div className='h-screen flex items-center flex-col'>
-      <div className='flex flex-col gap-4 mt-20'>
-        <h1 className='text-3x1' >Hello, this is the NEU Reverse transfer class finder</h1>
+      <div className='flex flex-col gap-4 mt-20 max-w-200'>
+        <h1 className='text-xl mb-3' >Welcome to the NEU Reverse transfer class finder</h1>
+        <p> This utility is intended to help find courses at other universities that can
+           satisify particular requirements at Northeastern.
+           <b><em> This site is NOT an official Northeastern offering. Verify all course choices with your academic advisor.</em></b>
+        </p>
+        <p> To find out what Northeastern credit is available for your courses from other 
+          universities please refer to 
+        </p>
         <div className='flex flex-col sm:flex-row'>
           <select 
             value={dept}
