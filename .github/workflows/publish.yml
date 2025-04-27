@@ -36,5 +36,5 @@ jobs:
         with:
           context: .
           dockerfile: Dockerfile
-          tags: ghcr.io/${{ env.ACTOR_LC }}/neu_transfer_db_frontent:latest
+          tags: ghcr.io/${{ env.ACTOR_LC }}/neu_transfer_db_frontend:latest
           push: true
