@@ -1,5 +1,10 @@
-# Reverse Transfer Course Database
+# Reverse Transfer Course Database Frontend
+<div align="center">
+  <img src=https://github.com/user-attachments/assets/c1b41dd7-7075-4d2f-a3a3-ad4974642e25 alt="Project Screenshot" width="600">
 
+</div>
+
+## Desciption
 Provides a web interface to access and query a database of past sucessful course transfers at Northeastern University.
 
 ## Purpose
